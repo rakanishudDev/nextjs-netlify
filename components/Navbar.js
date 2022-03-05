@@ -11,13 +11,15 @@ export default function Navbar() {
       <nav>
         <Image src="/rupee.png" width={50} height={48} />
         <h1>Gaming Vibes</h1>
-        { authReady && (<ul>
+        { authReady && (
+        <ul>
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/guides"><a>Guides</a></Link></li>
 
           { !user ? <li onClick={login} className="btn">Login/Signup</li> :
           <><li>{user.email}</li><li onClick={logout} className="btn">Log out</li></> }
-        </ul>)}
+        </ul>
+        )}
       </nav>
       <div className="banner">
         <Image src="/banner.png" width={966} height={276} />
